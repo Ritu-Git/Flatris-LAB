@@ -1,4 +1,11 @@
 # Node.js Express Web App to Linux on Azure
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'riturg (0638b34b-0440-4a15-a9c1-d0aada5c2ca9)'
+    appType: 'webApp'
+    appName: 'Ritu-gitDevopsWebApp'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
 # Build a Node.js Express app and deploy it to Azure as a Linux web app.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
